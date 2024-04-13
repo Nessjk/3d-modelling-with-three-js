@@ -1,45 +1,38 @@
-# 3d modelling with three js
+## Starter
 
-This template should help get you started developing with Vue 3 in Vite.
+Using `ni` https://github.com/antfu/ni as package manager to try it out. If you’re fed up of typing `npm install` in a `yarn` , this is for you! It’s helps you select the right package manager.
 
-## Recommended IDE Setup
+`nr dev --port=3000` runs
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+```sql
+nr dev --port=3000
 
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-pnpm install
+# npm run dev -- --port=3000
+# yarn run dev --port=3000
+# pnpm run dev --port=3000
+# bun run dev --port=3000
 ```
 
-### Compile and Hot-Reload for Development
+Known bugs with ni:
 
-```sh
-pnpm dev
-```
+- node -v 14
 
-### Type-Check, Compile and Minify for Production
+## Tag elements info
 
-```sh
-pnpm build
-```
+`<primitive />`
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+`<suspense />`
 
-```sh
-pnpm test:unit
-```
+## Miscellaneous
 
-### Lint with [ESLint](https://eslint.org/)
+`toValue()` is an API added in 3.3. It is designed to normalize refs or getters into values. If the argument is a ref, it returns the ref's value; if the argument is a function, it will call the function and return its return value. Otherwise, it returns the argument as-is. It works similarly to **`[unref()](https://vuejs.org/api/reactivity-utilities#unref)`**, but with special treatment for functions.
 
-```sh
-pnpm lint
-```
+## Extra info
+
+`composable` folder to use state. You can think of them as the equivalent of mixins from back in the day, but better. Unlike mixins, which can cause variable and method name clashes composables come with
+
+- the Composition API which has better typescript integration.
+- complete control over imports and exports
+- better scalability
+- Clearer Lifecycle Hook Management
+- Tree Shaking Support (elimination of unused code) - every mixin is used in every component where it's included
