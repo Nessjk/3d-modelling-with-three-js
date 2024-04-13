@@ -1,6 +1,6 @@
 ## Starter
 
-Using `ni` https://github.com/antfu/ni as package manager to try it out. If you’re fed up of typing `npm install` in a `yarn` , this is for you! It’s helps you select the right package manager.
+Using `ni` https://github.com/antfu/ni as package manager to try it out. If you’re fed up of typing `npm install` in a `yarn` project, this is for you! It’s helps you select the right package manager.
 
 `nr dev --port=3000` runs
 
